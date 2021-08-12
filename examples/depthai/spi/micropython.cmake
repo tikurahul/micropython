@@ -3,6 +3,7 @@ add_library(depthai_spi INTERFACE)
 
 # Add our source files to the lib
 target_sources(depthai_spi INTERFACE
+    ${CMAKE_CURRENT_LIST_DIR}/spi_module.c
     ${CMAKE_CURRENT_LIST_DIR}/spi.cpp
     ${CMAKE_CURRENT_LIST_DIR}/depthai-spi-api/spi_api.cpp
     ${CMAKE_CURRENT_LIST_DIR}/depthai-spi-api/common/float16.c

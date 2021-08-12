@@ -5,7 +5,9 @@
         "algorithm": "cpp",
         "rawbuffer.hpp": "c",
         "rawimgdetections.hpp": "c",
-        "rawtracklets.hpp": "c"
+        "rawtracklets.hpp": "c",
+        "spi.cpp": "c",
+        "datatypeenum.hpp": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
