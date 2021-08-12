@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "spi_api.hpp": "c",
+        "esp32_spi_impl.h": "c",
+        "algorithm": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
+}

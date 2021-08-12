@@ -1,2 +1,2 @@
-# Include Depth AI example.
-include(${CMAKE_CURRENT_LIST_DIR}/example/micropython.cmake)
+# Include Depth AI SPI Module.
+include(${CMAKE_CURRENT_LIST_DIR}/spi/micropython.cmake)
