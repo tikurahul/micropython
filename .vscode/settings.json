@@ -7,7 +7,23 @@
         "rawimgdetections.hpp": "c",
         "rawtracklets.hpp": "c",
         "spi.cpp": "c",
-        "datatypeenum.hpp": "c"
+        "datatypeenum.hpp": "c",
+        "runtime.h": "c",
+        "stdio.h": "c",
+        "list": "c",
+        "array": "c",
+        "string": "c",
+        "string_view": "c",
+        "rawsysteminformation.hpp": "c",
+        "typeinfo": "c",
+        "valarray": "c",
+        "rawspatialimgdetections.hpp": "c",
+        "pystack.h": "c",
+        "mperrno.h": "c",
+        "stdint.h": "c",
+        "stddef.h": "c",
+        "obj.h": "c",
+        "functional": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
