@@ -12,9 +12,9 @@ STATIC const mp_rom_map_elem_t depthai_spi_module_globals_table[] = {
 
 STATIC MP_DEFINE_CONST_DICT(depthai_spi_module_globals, depthai_spi_module_globals_table);
 
-const mp_obj_module_t depthapi_spi_module = {
+const mp_obj_module_t depthai_spi_module = {
     .base = { &mp_type_module },
     .globals = (mp_obj_dict_t *)&depthai_spi_module_globals,
 };
 
-MP_REGISTER_MODULE(MP_QSTR_depthapi_spi, depthapi_spi_module, 1);
+MP_REGISTER_MODULE(MP_QSTR_depthai_spi, depthai_spi_module, 1);
