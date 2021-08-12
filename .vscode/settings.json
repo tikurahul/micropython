@@ -2,7 +2,10 @@
     "files.associations": {
         "spi_api.hpp": "c",
         "esp32_spi_impl.h": "c",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "rawbuffer.hpp": "c",
+        "rawimgdetections.hpp": "c",
+        "rawtracklets.hpp": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
