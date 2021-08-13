@@ -23,7 +23,8 @@
         "stdint.h": "c",
         "stddef.h": "c",
         "obj.h": "c",
-        "functional": "c"
+        "functional": "c",
+        "bitset": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
