@@ -7,12 +7,14 @@ STATIC MP_DEFINE_CONST_FUN_OBJ_0(deinit_spi_obj, deinit_spi);
 STATIC MP_DEFINE_CONST_FUN_OBJ_2(depthai_send_data_spi_obj, depthai_send_data_spi);
 STATIC MP_DEFINE_CONST_FUN_OBJ_1(depthai_set_chunk_callback_obj, depthai_set_chunk_callback);
 STATIC MP_DEFINE_CONST_FUN_OBJ_1(depthai_pop_messages_obj, depthai_pop_messages);
+STATIC MP_DEFINE_CONST_FUN_OBJ_1(depthapi_request_data_obj, depthapi_request_data);
 
 STATIC const mp_rom_map_elem_t depthai_spi_module_globals_table[] = {
     { MP_ROM_QSTR(MP_QSTR___name__), MP_ROM_QSTR(MP_QSTR_depthai_spi) },
     { MP_ROM_QSTR(MP_QSTR_init_spi), MP_ROM_PTR(&init_spi_obj) },
     { MP_ROM_QSTR(MP_QSTR_deinit_spi), MP_ROM_PTR(&deinit_spi_obj) },
     { MP_ROM_QSTR(MP_QSTR_send_data), MP_ROM_PTR(&depthai_send_data_spi_obj) },
+    { MP_ROM_QSTR(MP_QSTR_request_data), MP_ROM_PTR(&depthapi_request_data_obj) },
     { MP_ROM_QSTR(MP_QSTR_set_chunk_callback), MP_ROM_PTR(&depthai_set_chunk_callback_obj) },
     { MP_ROM_QSTR(MP_QSTR_pop_messages), MP_ROM_PTR(&depthai_pop_messages_obj) },
 };

@@ -39,6 +39,18 @@ mp_obj_t depthai_send_data_spi(mp_obj_t stream_name, mp_obj_t data) {
     return mp_obj_new_int(result);
 }
 
+mp_obj_t depthapi_request_data(mp_obj_t stream_name) {
+    if (!mp_obj_is_str(stream_name)) {
+        mp_raise_TypeError(NULL);
+    }
+    const char* name = mp_obj_str_get_str(stream_name);
+    dai::Data data;
+    uint8_t result = spiApi.req_data(&data, name);
+    uint32_t r_size = data.size;
+    uint8_t* r_buffer = data.data;
+    return mp_obj_new_bytearray(r_size, r_buffer);
+}
+
 mp_obj_t depthai_set_chunk_callback(mp_obj_t func) {
     if (!mp_obj_is_fun(func)) {
         mp_raise_TypeError(NULL);
