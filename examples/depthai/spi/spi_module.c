@@ -5,7 +5,7 @@
 STATIC MP_DEFINE_CONST_FUN_OBJ_0(init_spi_obj, init_spi);
 STATIC MP_DEFINE_CONST_FUN_OBJ_0(deinit_spi_obj, deinit_spi);
 STATIC MP_DEFINE_CONST_FUN_OBJ_2(depthai_send_data_spi_obj, depthai_send_data_spi);
-STATIC MP_DEFINE_CONST_FUN_OBJ_1(depthai_set_chunk_callback_obj, depthai_set_chunk_callback);
+STATIC MP_DEFINE_CONST_FUN_OBJ_2(depthai_set_chunk_callback_obj, depthai_set_chunk_callback);
 STATIC MP_DEFINE_CONST_FUN_OBJ_1(depthai_pop_messages_obj, depthai_pop_messages);
 STATIC MP_DEFINE_CONST_FUN_OBJ_1(depthapi_request_data_obj, depthapi_request_data);
 
