@@ -12,6 +12,10 @@ static dai::SpiApi spiApi;
 extern "C" {
 #include "spi.h"
 
+// Keeps track of the SPI bus being initialized.
+static bool initialized = false;
+
+// The Python callback for the chunked message handler.
 static mp_obj_t* funcptr = NULL;
 
 void chunk_message_handler(char* packet, uint32_t packet_size, uint32_t message_size) {
@@ -71,14 +75,20 @@ mp_obj_t depthai_set_chunk_callback(mp_obj_t stream_name, mp_obj_t func) {
 }
 
 mp_obj_t init_spi() {
-    init_esp32_spi();
-    spiApi.set_send_spi_impl(&esp32_send_spi);
-    spiApi.set_recv_spi_impl(&esp32_recv_spi);
+    if (!initialized) {
+        initialized = true;
+        init_esp32_spi();
+        spiApi.set_send_spi_impl(&esp32_send_spi);
+        spiApi.set_recv_spi_impl(&esp32_recv_spi);
+    }
     return mp_obj_new_bool(1);
 }
 
 mp_obj_t deinit_spi() {
-    deinit_esp32_spi();
+    if (initialized) {
+        deinit_esp32_spi();
+        initialized = false;
+    }
     return mp_obj_new_bool(1);
 }
 
