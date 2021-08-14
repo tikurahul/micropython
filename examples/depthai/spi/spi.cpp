@@ -51,7 +51,9 @@ mp_obj_t depthapi_request_data(mp_obj_t stream_name) {
     }
     uint32_t r_size = data.size;
     uint8_t* r_buffer = data.data;
-    return mp_obj_new_bytearray(r_size, r_buffer);
+    mp_obj_t req_data = mp_obj_new_bytearray(r_size, r_buffer);
+    free(r_buffer);
+    return req_data;
 }
 
 mp_obj_t depthai_set_chunk_callback(mp_obj_t stream_name, mp_obj_t func) {
